@@ -2,32 +2,7 @@ html{
 	font-family: 	"Source Sans Pro", "Arial", "Helvetica Neue", "Helvetica", "sans-serif";
 }
 
-@media screen and (max-width: 600px) {
-  nav a {
-    float: none;
-    display: block;
-  }
 
-  .topnav-centered a {
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: none;
-  }
-	.container{
-		float: none;
-		display: block;
-	}
-	.title-banner{
-		position: none;
-	}
-	.card{
-		float: none;
-		display: block;
-		padding-left: 0;
-		padding-right: 0;
-	}
-}
 h1{
 	color: #61892f;
 	font-size: 24px;
@@ -65,16 +40,21 @@ img{
   margin-left: auto;
   margin-right: auto;
 }
-.container {
+
+.banner {
+	float: none;
   position: relative;
   text-align: center;
   color: white;
 }
-.title-banner{
+.bannerTitle{
 	position: absolute;
-	bottom: 60%;
-	left: 50%;
-	transform: translate(-50%, -50%)
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.banner-mobile{
+	display: none;
 }
 
 nav{
@@ -151,13 +131,58 @@ nav h1{
 }
 
 .fixed-size-image{
-	max-width: 500px;
+	width: 100%;
 	max-height: auto;
 }
 
 .card{
 	float: left;
-	padding: 20px;
+	width:42%;
+    padding: 2%;
+    margin:2%;
+}
+.cards{
+	overflow: hidden;
+
+}
+footer{
+	width: 100%;
+    height: 50px;
+		text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  nav a {
+    float: none;
+    display: block;
+  }
+
+  .topnav-centered a {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+	.banner{
+		display: none;
+	}
+	.banner-mobile{
+		float: none;
+		display: block;
+		padding-bottom: 20px;
+		text-align: center;
+	}
+	.card{
+		float: none;
+		display: block;
+		width: 89%;
+		padding: 5%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.cards{
+		margin-left: 0;
+	}
 }
 
 
